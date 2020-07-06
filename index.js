@@ -53,5 +53,16 @@ function submitPost(title, caption, image_url, category_id) {
     .then(resp => resp.json())
     .then(post => {
         console.log(post);
+        const postData = post.data
+        const PostMarkup = `
+        <div data-id=${post.id}>
+        <img src=${postData.attributes.image_url} height="200" width="250">
+        <h3>${postData.attributes.title}</h3>
+        <p>${postData.attributes.category.name}</p>
+        <button data-id=${postData.id}>edit</button>
+        </div>
+        <br><br>`;
+
+        document.querySelector('#post-container').innerHTML += postMarkup;
     })
 }
