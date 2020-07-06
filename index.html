@@ -7,6 +7,29 @@
     <script type="text/javascript" src="index.js"></script>
 </head>
 <body>
-    
+    <div class="form-container">
+        <form id="create-post-form">
+            <h3>Add A Post!</h3>
+            
+            <input id="input-title" type="text" name="title" value="" placeholder="Title" class="input-text">
+            <br><br>
+            <input id="input-caption" type="text" name="caption" value="" placeholder="Caption" class="input-text">
+            <br><br>
+            <input id="input-image" type="text" name="image" value="" placeholder="Image URL" class="input-text">
+            <br><br>
+
+            <select id="categories" name="categories">
+                <option value="1">Hike</option>
+                <option value="2">Lake</option>
+                <option value="3">Golf</option>
+            </select>
+            <br><br>
+            <input id= 'create-button' type="submit" name="submit" value="Post" class="submit">
+
+        </form>
+
+    </div>
+
+    <div id="post-container"></div>
 </body>
 </html>
